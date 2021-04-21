@@ -16,6 +16,7 @@
 import { Component } from "react";
 import Clock from "./components/Clock";
 import User from "./components/User";
+import Form from "./components/Form";
 
 class App extends Component {
   render() {
@@ -31,6 +32,12 @@ class App extends Component {
         </ul>
         <hi>
           <Clock title="Current date ="/>
+        </hi>
+        <br />
+        <br />
+        <br />
+        <hi>
+          <Form />
         </hi>
       </div>
     )
