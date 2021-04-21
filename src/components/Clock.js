@@ -7,10 +7,10 @@ class Clock extends Component {
     }
 
     componentDidMount() { // ตอนที่ component นี้เริ่มใช้
-        setInterval( () => { this.setState({date: new Date()})}, 1000 ); // {ทำอะไร}, ทุกๆ 1000 ms
+       this.interval = setInterval( () => { this.setState({date: new Date()})}, 1000 ); // {ทำอะไร}, ทุกๆ 1000 ms
     }
     componentWillMount() { // ตอนที่ component นี้เลิกใช้
-
+        clearInterval(this.interval)
     }
 
     render() {
