@@ -25,6 +25,16 @@ class App extends Component {
     {id: 2, name: "nongnost", age:25},
     {id: 3, name: "nongfei", age:25},
   ];
+  constructor() {
+    super()
+    this.state = {message: "---------"};
+    this.newSession =this.newSession.bind(this);
+  };
+  
+  // callback function
+  newSession(input) {
+    this.setState({message : "New Session : " + input})
+  };
 
   render() {
     return (
@@ -37,7 +47,10 @@ class App extends Component {
           <Clock title="Current date ="/>
         </h1>
         <h1>
-          <Form />
+          <Form onSayHi={this.newSession}/>
+          <p>
+            {this.state.message}
+          </p>
         </h1>
       </div>
     )

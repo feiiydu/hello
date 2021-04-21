@@ -19,7 +19,8 @@ doPrinting(event) {
 }
 SayHello(event) {
     console.log("Click Submit!!!")
-    this.setState({message : "Hello " + this.state.name});
+    this.props.onSayHi(this.state.name)
+    // this.setState({message : "Hello " + this.state.name});
 }
 
     render() {
