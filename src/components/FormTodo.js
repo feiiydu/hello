@@ -1,5 +1,5 @@
-import { clean } from "gh-pages";
 import { Component } from "react";
+import '../App.css';
 
 class FormTodo extends Component {
 
@@ -33,11 +33,12 @@ class FormTodo extends Component {
         var all = (this.tasks.length).toString()
         console.log(remaining , all)
         this.setState({message:remaining +" remaining out of "+all+" tasks"})
+        document.getElementById("text-field").value = ""
     }
 
     render() {
         const data = this.tasks.map((task) => ( //loop for each put in 'data'
-            <li key={task.id}>
+            <li className="Strikethrough" key={task.id} >
                 { task.task }
             </li>
             
