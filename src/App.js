@@ -19,26 +19,26 @@ import User from "./components/User";
 import Form from "./components/Form";
 
 class App extends Component {
+
+  users = [
+    {id: 1, name: "nonggap", age:25},
+    {id: 2, name: "nongnost", age:25},
+    {id: 3, name: "nongfei", age:25},
+  ];
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
           Nonggap was here!       
         </header>
-        <ul>
-          <User info="User 01" age="25"/>
-          <User info="User 02"/>
-          <User info="User 03"/>
-        </ul>
-        <hi>
+        <User users={this.users}/>
+        <h1>
           <Clock title="Current date ="/>
-        </hi>
-        <br />
-        <br />
-        <br />
-        <hi>
+        </h1>
+        <h1>
           <Form />
-        </hi>
+        </h1>
       </div>
     )
   }

@@ -9,7 +9,21 @@ import { Component } from "react";
 
 class User extends Component {
     render() {
-        return <li>{ this.props.info } - { this.props.age }</li>;
+        const data = this.props.users.map((user) => ( //loop for each put in 'data'
+            <li key={user.id}>
+                { user.name } , { user.age }
+            </li>
+        ));
+        return (
+            <ul>{data}</ul>
+            
+
+
+            // <ul>
+            //     {his.props.User.map((user)=>())}
+            //     <li>{ this.props.info } - { this.props.age }</li>;)
+            // </ul>
+        )        
     }
     
 }
