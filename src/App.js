@@ -14,6 +14,7 @@
 // export default App;
 
 import { Component } from "react";
+import Clock from "./components/Clock";
 import User from "./components/User";
 
 class App extends Component {
@@ -21,10 +22,13 @@ class App extends Component {
     return (
       <div>
         <ul>
-          <User info="User 01"/>
+          <User info="User 01" age="25"/>
           <User info="User 02"/>
           <User info="User 03"/>
         </ul>
+        <hi>
+          <Clock></Clock>
+        </hi>
       </div>
     )
   }
