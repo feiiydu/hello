@@ -6,6 +6,8 @@ class Clock extends Component {
         this.state = { date: new Date() };
     }
 
+
+    // React's component life cycle
     componentDidMount() { // ตอนที่ component นี้เริ่มใช้
        this.interval = setInterval( () => { this.setState({date: new Date()})}, 1000 ); // {ทำอะไร}, ทุกๆ 1000 ms
     }
@@ -14,7 +16,7 @@ class Clock extends Component {
     }
 
     render() {
-        return <div> Current date = {this.state.date.toLocaleTimeString()} </div>;  
+        return <div> {this.props.title} {this.state.date.toLocaleTimeString()} </div>;  
     }
     
 }
